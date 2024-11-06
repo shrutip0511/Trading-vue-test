@@ -487,6 +487,9 @@ export default {
     },
     toggleSidebarCustomRange(verticalRange){
       this.$refs.chart.toggleSidebarCustomRange(verticalRange)
+    },
+    changeSidebarCustomRange(verticalRange){
+      this.$refs.chart.changeSidebarCustomRange(verticalRange)
     }
   },
   watch:{
