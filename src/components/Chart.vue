@@ -529,6 +529,19 @@ export default {
       // const lay = new Layout(this)
       // this.ce('?chart-update',lay)
     },
+    changeSidebarCustomRange(vericalRange){
+      this.y_transforms['0'] = {
+            grid_id: 0,
+            zoom: 1,
+            auto: true,
+            range: vericalRange ,
+            drugging: false,
+          }
+      this.update_layout()  
+      this.$emit('sidebar-transform', this.y_transforms['0'])
+      // const lay = new Layout(this)
+      // this.ce('?chart-update',lay)
+    },
 
     toggleSideBarYAxis() {
 
