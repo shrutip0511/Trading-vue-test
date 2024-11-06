@@ -59,7 +59,9 @@ export default class Sidebar {
     });
 
     mc.on("panmove", (event) => {
+      
       if (this.drug) {
+        console.log("panmove called". event);
         this.zoom = this.calc_zoom(event);
         this.comp.$emit("sidebar-transform", {
           grid_id: this.id,

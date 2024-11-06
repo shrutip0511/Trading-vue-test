@@ -11484,6 +11484,7 @@ var Sidebar = /*#__PURE__*/function () {
       });
       mc.on("panmove", function (event) {
         if (_this.drug) {
+          console.log("panmove called".event);
           _this.zoom = _this.calc_zoom(event);
           _this.comp.$emit("sidebar-transform", {
             grid_id: _this.id,
