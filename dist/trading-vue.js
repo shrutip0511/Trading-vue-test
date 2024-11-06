@@ -5332,8 +5332,8 @@ var MAP_UNIT = {
   map_unit: MAP_UNIT,
   IB_TF_WARN: IB_TF_WARN
 });
-;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Chart.vue?vue&type=template&id=6d2ca3ac
-var Chartvue_type_template_id_6d2ca3ac_render = function render() {
+;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Chart.vue?vue&type=template&id=9e4151ec
+var Chartvue_type_template_id_9e4151ec_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
@@ -5378,10 +5378,10 @@ var Chartvue_type_template_id_6d2ca3ac_render = function render() {
     }
   }, "botbar", _vm.botbar_props, false))], 2);
 };
-var Chartvue_type_template_id_6d2ca3ac_staticRenderFns = [];
-Chartvue_type_template_id_6d2ca3ac_render._withStripped = true;
+var Chartvue_type_template_id_9e4151ec_staticRenderFns = [];
+Chartvue_type_template_id_9e4151ec_render._withStripped = true;
 
-;// ./src/components/Chart.vue?vue&type=template&id=6d2ca3ac
+;// ./src/components/Chart.vue?vue&type=template&id=9e4151ec
 
 ;// ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js
 function _arrayWithHoles(r) {
@@ -13797,9 +13797,7 @@ var TI = /*#__PURE__*/function () {
       this.y_transforms['0'] = {
         grid_id: 0,
         zoom: 1,
-        auto: true,
-        range: vericalRange,
-        drugging: false
+        auto: true
       };
       this.update_layout();
       this.$emit('sidebar-transform', this.y_transforms['0']);
@@ -13859,8 +13857,8 @@ var TI = /*#__PURE__*/function () {
 ;
 var Chart_component = normalizeComponent(
   components_Chartvue_type_script_lang_js,
-  Chartvue_type_template_id_6d2ca3ac_render,
-  Chartvue_type_template_id_6d2ca3ac_staticRenderFns,
+  Chartvue_type_template_id_9e4151ec_render,
+  Chartvue_type_template_id_9e4151ec_staticRenderFns,
   false,
   null,
   null,

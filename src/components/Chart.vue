@@ -534,8 +534,6 @@ export default {
             grid_id: 0,
             zoom: 1,
             auto: true,
-            range: vericalRange ,
-            drugging: false,
           }
       this.update_layout()  
       this.$emit('sidebar-transform', this.y_transforms['0'])
