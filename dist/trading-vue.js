@@ -16644,25 +16644,26 @@ var DCCore = /*#__PURE__*/function (_DCEvents) {
               if (check === void 0) {
                 check = false;
               }
+              console.log("range changed shruti");
               if (this.loader) {
-                _context.next = 3;
+                _context.next = 4;
                 break;
               }
               return _context.abrupt("return");
-            case 3:
+            case 4:
               if (this.loading) {
-                _context.next = 19;
+                _context.next = 20;
                 break;
               }
               first = this.data.chart.data[0][0];
               if (!(range[0] < first)) {
-                _context.next = 19;
+                _context.next = 20;
                 break;
               }
               this.loading = true;
-              _context.next = 9;
+              _context.next = 10;
               return utils.pause(250);
-            case 9:
+            case 10:
               // Load bigger chunks
               range = range.slice(); // copy
               range[0] = Math.floor(range[0]);
@@ -16672,18 +16673,18 @@ var DCCore = /*#__PURE__*/function (_DCEvents) {
                 _this2.chunk_loaded(d);
               });
               if (!(prom && prom.then)) {
-                _context.next = 19;
+                _context.next = 20;
                 break;
               }
               _context.t0 = this;
-              _context.next = 17;
+              _context.next = 18;
               return prom;
-            case 17:
+            case 18:
               _context.t1 = _context.sent;
               _context.t0.chunk_loaded.call(_context.t0, _context.t1);
-            case 19:
-              if (!check) this.last_chunk = [range, tf];
             case 20:
+              if (!check) this.last_chunk = [range, tf];
+            case 21:
             case "end":
               return _context.stop();
           }

@@ -70,7 +70,8 @@ export default class DCCore extends DCEvents {
     // Range change callback (called by TradingVue)
     // TODO: improve (reliablity + chunk with limited size)
     async range_changed(range, tf, check=false) {
-
+        console.log("range changed shruti");
+        
         if (!this.loader) return
         if (!this.loading) {
             let first = this.data.chart.data[0][0]
