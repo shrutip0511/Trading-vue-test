@@ -447,10 +447,10 @@ export default {
     },
     range_changed(r,manualInteraction = false) {
       console.log("shruti into tv", r);
-      if (this.chart_props.ib) {
-        const ti_map = this.$refs.chart.ti_map;
-        r = r.map((x) => ti_map.i2t(x));
-      }
+      // if (this.chart_props.ib) {
+      //   const ti_map = this.$refs.chart.ti_map;
+      //   r = r.map((x) => ti_map.i2t(x));
+      // }
       // update
       // this.$emit("range-changed", r,manualInteraction);
       
