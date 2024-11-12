@@ -7506,13 +7506,14 @@ var Grid = /*#__PURE__*/function () {
       // and keep scrolling,
       // the chart continues to scale down a little.
       // Solution: I don't know yet
-      console.log("change_range grid.js");
+
       if (!this.range.length || this.data.length < 2) return;
       var l = this.data.length - 1;
       var data = this.data;
       var range = this.range;
       range[0] = utils.clamp(range[0], -Infinity, data[l][0] - this.interval * 5.5);
       range[1] = utils.clamp(range[1], data[0][0] + this.interval * 5.5, Infinity);
+      console.log("change_range grid.js", range);
 
       // TODO: IMPORTANT scrolling is jerky The Problem caused
       // by the long round trip of 'range-changed' event.
