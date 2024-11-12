@@ -23,6 +23,8 @@ export default class Sidebar {
   }
 
   calc_range_by_layout() {
+    console.log("calc_range_function", [this.layout.$_hi, this.layout.$_lo]);
+    
     return [this.layout.$_hi, this.layout.$_lo]
   }
   listeners() {

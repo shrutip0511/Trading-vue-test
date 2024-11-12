@@ -1,5 +1,5 @@
 /*!
- * TradingVue.JS - v1.0.3 - Wed Nov 06 2024
+ * TradingVue.JS - v1.0.3 - Tue Nov 12 2024
  *     https://github.com/tvjsx/trading-vue-js
  *     Copyright (c) 2019 C451 Code's All Right;
  *     Licensed under the MIT license
@@ -11451,6 +11451,7 @@ var Sidebar = /*#__PURE__*/function () {
   return createClass_createClass(Sidebar, [{
     key: "calc_range_by_layout",
     value: function calc_range_by_layout() {
+      console.log("calc_range_function", [this.layout.$_hi, this.layout.$_lo]);
       return [this.layout.$_hi, this.layout.$_lo];
     }
   }, {
