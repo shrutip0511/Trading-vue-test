@@ -452,7 +452,7 @@ export default {
         r = r.map((x) => ti_map.i2t(x));
       }
       // update
-      this.$emit("range-changed", r,manualInteraction);
+      // this.$emit("range-changed", r,manualInteraction);
       
       // this.custom_event({ event: "range-changed", args: [r,r2] });
       if (this.onrange) this.onrange(r);
