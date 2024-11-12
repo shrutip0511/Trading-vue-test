@@ -7477,6 +7477,7 @@ var Grid = /*#__PURE__*/function () {
       }
       this.range[0] = this.drug.r[0] + dt;
       this.range[1] = this.drug.r[1] + dt;
+      console.log("mousedrag called");
       this.change_range();
     }
   }, {
