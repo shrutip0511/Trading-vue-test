@@ -461,7 +461,7 @@ export default class Grid {
 
     this.range[0] = this.drug.r[0] + dt;
     this.range[1] = this.drug.r[1] + dt;
-    console.log("mousedrag called");
+    console.log("mousedrag called",this.drug.r[0] + dt, this.drug.r[1] + dt);
     
     this.change_range();
   }
@@ -512,7 +512,15 @@ export default class Grid {
       data[0][0] + this.interval * 5.5,
       Infinity
     );
-    console.log("change_range grid.js", range);
+    console.log("change_range grid.js", range, {
+      a:range[0],
+      b:-Infinity,
+      c:data[l][0] - this.interval * 5.5
+    }, {
+      a:range[1],
+      b:data[0][0] + this.interval * 5.5,
+      c:Infinity
+    });
 
     // TODO: IMPORTANT scrolling is jerky The Problem caused
     // by the long round trip of 'range-changed' event.
