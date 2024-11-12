@@ -7506,7 +7506,7 @@ var Grid = /*#__PURE__*/function () {
       // and keep scrolling,
       // the chart continues to scale down a little.
       // Solution: I don't know yet
-
+      console.log("change_range grid.js");
       if (!this.range.length || this.data.length < 2) return;
       var l = this.data.length - 1;
       var data = this.data;
