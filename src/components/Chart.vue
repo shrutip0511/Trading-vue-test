@@ -266,6 +266,8 @@ export default {
   },
   methods: {
     range_changed(r,manualInteraction = false) {
+      console.log("shruti 124", r);
+      
       // Overwite & keep the original references
       // Quick fix for IB mode (switch 2 next lines)
       // TODO: wtf?
