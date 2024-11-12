@@ -7076,13 +7076,13 @@ var Grid = /*#__PURE__*/function () {
         }
         if (_this.drug) {
           if (_this.$p.enableZoom) {
-            console.log("panmove event if block");
             _this.mousedrag(_this.drug.x + event.deltaX, _this.drug.y + event.deltaY);
             _this.comp.$emit("cursor-changed", {
               grid_id: _this.id,
               x: event.center.x + _this.offset_x,
               y: event.center.y + _this.offset_y
             });
+            console.log("panmove event if block", event.center.x + _this.offset_x, event.center.y + _this.offset_y);
           }
         } else if (_this.cursor.mode === "aim") {
           _this.emit_cursor_coord(event);

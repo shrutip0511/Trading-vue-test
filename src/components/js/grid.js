@@ -31,7 +31,7 @@ export default class Grid {
     this.deltas = 0; // Wheel delta events
     this.wmode = this.$p.config.SCROLL_WHEEL;
     // if (this.$p.enableZoom) {
-      this.listeners();
+    this.listeners();
     // }
     this.overlays = [];
   }
@@ -39,8 +39,8 @@ export default class Grid {
   listeners() {
     //console.log(this.$p.enableZoom);
     this.hm = Hamster(this.canvas);
-    
-    if(this.$p.enableZoom){
+
+    if (this.$p.enableZoom) {
       this.hm.wheel((event, delta) => this.mousezoom(-delta * 50, event));
     }
 
@@ -82,20 +82,20 @@ export default class Grid {
         this.calc_offset();
         this.propagate("mousemove", this.touch2mouse(event));
       }
-        if (this.drug) {
-          if(this.$p.enableZoom){
-        console.log("panmove event if block")
-        this.mousedrag(this.drug.x + event.deltaX, this.drug.y + event.deltaY);
-        this.comp.$emit("cursor-changed", {
-          grid_id: this.id,
-          x: event.center.x + this.offset_x,
-          y: event.center.y + this.offset_y,
-        });
-      }
+      if (this.drug) {
+        if (this.$p.enableZoom) {
+          this.mousedrag(this.drug.x + event.deltaX, this.drug.y + event.deltaY);
+          this.comp.$emit("cursor-changed", {
+            grid_id: this.id,
+            x: event.center.x + this.offset_x,
+            y: event.center.y + this.offset_y,
+          });
+          console.log("panmove event if block", event.center.x + this.offset_x, event.center.y + this.offset_y)
+        }
       } else if (this.cursor.mode === "aim") {
         this.emit_cursor_coord(event);
       }
-    
+
     });
 
     mc.on("panend", (event) => {
@@ -133,7 +133,7 @@ export default class Grid {
     });
 
     mc.on("pinch", (event) => {
-      if(this.$p.enableZoom){
+      if (this.$p.enableZoom) {
         if (this.pinch) this.pinchzoom(event.scale);
       }
     });
@@ -493,19 +493,19 @@ export default class Grid {
     // and keep scrolling,
     // the chart continues to scale down a little.
     // Solution: I don't know yet
-    
+
     if (!this.range.length || this.data.length < 2) return;
-    
+
     let l = this.data.length - 1;
     let data = this.data;
     let range = this.range;
-    
+
     range[0] = Utils.clamp(
       range[0],
       -Infinity,
       data[l][0] - this.interval * 5.5
     );
-    
+
     range[1] = Utils.clamp(
       range[1],
       data[0][0] + this.interval * 5.5,
@@ -521,7 +521,7 @@ export default class Grid {
     // the lag. No smooth movement and it's annoying.
     // Solution: we could try to calc the layout immediatly
     // somewhere here. Still will hurt the sidebar & bottombar
-    this.comp.$emit("range-changed", range,true);
+    this.comp.$emit("range-changed", range, true);
   }
 
   // Propagate mouse event to overlays
