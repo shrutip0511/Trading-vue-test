@@ -11694,6 +11694,7 @@ var Sidebar = /*#__PURE__*/function () {
         range[0] = f(new_hi);
         range[1] = f(new_lo);
       }
+      console.log("this range got set", range);
       return range;
     }
   }, {
